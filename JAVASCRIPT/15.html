@@ -1,0 +1,33 @@
+
+<html>
+<script>
+ 
+    function check()
+    {  
+        let find=find1.value
+        let message=msg.value
+        let count =0
+        for (let i= 0; i < message.length; i++){
+
+            if (message.substring(i, i+1) == find.substring(0,1)){
+
+                if (message.substring(i, i+ find.length)== find){
+                    count++
+                    i += find.length - 1
+                }
+            }
+        }
+        alert(count)
+        
+    }
+</script>
+ 
+Find this:<input id="find1">
+<br>
+<br>
+<input type="button" id="btn1" value="search" onclick="check()">
+<br>
+<br>
+message:<input id="msg" size="100">
+ 
+</html>

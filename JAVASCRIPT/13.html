@@ -1,0 +1,24 @@
+<html>
+
+<script>
+
+    function validation(){
+
+        if (usr1.value==""){
+            alert("user name is missing")
+            event.preventDefaut()
+        }
+    }
+
+</script>
+
+
+<form action ="http://www.bbc.com" onsubmit="validation()">
+
+    username:<input id="usr1">
+    <br>
+    <input type="submit" value="login">
+
+</form>
+
+</html>

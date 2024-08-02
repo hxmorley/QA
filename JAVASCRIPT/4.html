@@ -1,0 +1,89 @@
+<html>
+
+<script>
+    function add(){
+        let num1 = txt1.value
+        let num2 = txt2.value
+
+        if(num1 == ""){
+            alert ("first number is missing")
+            txt1.focus()
+        } else {
+            if (num2 == ""){
+                alert("second number is missing")
+                txt2.focus()
+            } else {
+                let result = parseInt(num1) + parseInt(num2)
+                txt3.value=result
+            }
+        }
+    }
+ //txt3.value= parseInt(txt1.value) + parseInt(txt2.value)
+ function minus(){
+        let num1 = txt1.value
+        let num2 = txt2.value
+
+        if(num1 == ""){
+            alert ("first number is missing")
+            txt1.focus()
+        } else {
+            if (num2 == ""){
+                alert("second number is missing")
+                txt2.focus()
+            } else {
+                let result = parseInt(num1) - parseInt(num2)
+                txt3.value=result
+            }
+        }
+    }
+
+    function multiply(){
+        let num1 = txt1.value
+        let num2 = txt2.value
+
+        if(num1 == ""){
+            alert ("first number is missing")
+            txt1.focus()
+        } else {
+            if (num2 == ""){
+                alert("second number is missing")
+                txt2.focus()
+            } else {
+                let result = parseInt(num1) * parseInt(num2)
+                txt3.value=result
+            }
+        }
+    }
+
+    function divide(){
+        let num1 = txt1.value
+        let num2 = txt2.value
+
+        if(num1 == ""){
+            alert ("first number is missing")
+            txt1.focus()
+        } else {
+            if (num2 == ""){
+                alert("second number is missing")
+                txt2.focus()
+            } else {
+                let result = parseInt(num1) / parseInt(num2)
+                txt3.value=result
+            }
+        }
+    } 
+
+</script>
+First Number:<input id="txt1" size="3">
+<br>
+Second Number:<input id="txt2" size="3">
+<br>
+<input id="Addition" type="button" value="Addition" onclick="add()">
+<input id="Subtraction" type="button" value="Subtraction" onclick="minus()">
+<input id="Multiplication" type="button" value="Multiplication" onclick="multiply()">
+<input id="Division" type="button" value="Division" onclick="divide()">
+<br>
+Result:<input id="txt3">
+<br>
+
+</html>

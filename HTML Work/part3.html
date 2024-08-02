@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            table, th, td{
+                border: 1px solid black
+            }
+        </style>
+    </head>
+    <body>
+        <!--TABLES-->
+        <table>
+            <tr> <!--table row-->
+                <td>cell 1</td> <!--Table data-->
+                <td>cell 2</td>
+                <td>cell 3</td>
+            </tr>
+        
+                <tr> <!--table row-->
+                    <th>collumn 1</th> <!--Table header-->
+                    <th>collumn 2</th>
+                    <th>collumn 3</th>
+                </tr>
+                
+                    <tr> <!--table row-->
+                        <td>cell 1</td> <!--Table data-->
+                        <td>cell 2</td>
+                        <td>cell 3</td>
+                    </tr>
+        
+        </table>
+
+        <!--FORMS-->
+        <!--can have a METHOD and an ACTION-->
+        <!--METHID : HOW to send info to a server-->
+        <!--ACTION : WHERE to send the info-->
+
+        <!--GET methods sends our form input to the URL bar-->
+        <!--with a name : value pair-->
+        <!-- use them like a hyperlink-->
+        <form method="get" action="search.html">
+            <h1>GET form</h1>
+            <!--an input for data-->
+            <input name="q" type="text">
+            <!--a button to send the form-->
+            <button type="submit">search</button>
+        </form>
+
+        <!--POST method sends data to the action URL-->
+        <form method="post" action="mailform.php">
+            <h1>POST form</h1>
+            <!--an input for data-->
+            <inpput name="q" type="text">
+            <!--a button to send the form-->
+            <button type="submit">search</button>
+        </form>
+
+        <hr/>
+
+        <!--FORM inputs-->
+        <form>
+            <input type="checkbox" name="checkbox1" value="1"/>1
+            <input type="checkbox" name="checkbox2" value="2"/>2
+
+            <fieldset></fieldset>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+ 
+<script>
+    function initilize() {
+        txt1.value = 0
+    }
+    function initilize3() {
+        txt1.value = 7777
+    }
+    function initilize2() {
+        txt1.value = 100
+    }
+    function increment() {
+        txt1.value = parseInt(txt1.value) + 1
+    }
+ 
+    function decrement() {
+        txt1.value = parseInt(txt1.value) - 1
+    }
+ 
+</script>
+<input id="txt1" value='0'>
+<br>
+<br>
+<br>
+<input type="Button" value=" I n c r e m e n t " onmousemove="increment()" onmouseenter="initilize3()">
+<br>
+<br>
+<br>
+ 
+<input type="Button" value=" D e c r e m e n t " onmousemove="decrement()" onclick="initilize()"
+    onmouseleave="initilize2()">
+<html>

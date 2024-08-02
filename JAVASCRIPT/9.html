@@ -1,0 +1,24 @@
+<html>
+<script>
+    function copydata(first,last){
+        msg2.value=""
+        let msg = msg1.value
+        for(let i = 0 ; i<msg.length ; i++){
+            if(msg.charCodeAt(i)>=first && msg.charCodeAt(i)<=last){
+                msg2.value += msg.substring(i,i+1)
+            }
+        }
+    }
+</script>
+Message1:<input id="msg1">
+<br>
+<br>
+<input type="button" value="Copy LOWER CASE" onclick="copydata(97,122)">
+<input type="button" value="Copy UPPER CASE" onclick="copydata(65,90)">
+<input type="button" value="Copy DIGITS" onclick="copydata(48,57)">
+<br>
+<br>
+Message 2<input id="msg2">
+<br>
+<br>
+</html>

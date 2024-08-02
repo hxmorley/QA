@@ -1,0 +1,22 @@
+<html>
+<script>
+    function processing() {
+        let data = msg.value
+        let space = 0
+        for (let i = 0; i < data.length; i++) {
+
+            if(data.substring(i, i + 1)==" "){
+                space++
+            }
+        }
+ 
+        words.value = "you have entered " + (space+1) + " words"
+    }
+</script>
+Message:<input id="msg">
+<br>
+<input id="words">
+<br>
+<input type="button" value="Click" onclick="processing()">
+ 
+</html>

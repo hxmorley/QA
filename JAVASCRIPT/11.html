@@ -1,0 +1,23 @@
+<html>
+<script>
+    let fsize = 10
+    function calculations(){
+        anything1.style.left = event.clientX
+        anything1.style.top = event.clientY
+        if(event.ctrlKey == true){
+            fsize++
+        }
+        if(event.altKey == true){
+            fsize--
+        }
+        anything1.style.fontSize=fsize
+    }
+</script>
+
+<body onmousemove="calculations()">
+    <span id="anything1" style="position:absolute;top:200;right:300">
+        Manchester
+    </span>
+</body>
+
+</html>

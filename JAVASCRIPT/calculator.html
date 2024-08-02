@@ -1,0 +1,65 @@
+<html>
+<script>
+    let firstnumber = 0
+    let optr = ""
+    function clearscreen(){
+        scrn.value = ""
+
+    }
+    function digits(digit){
+
+        if (digit == 0){
+            if (scrn.value != ""){
+                scrn.value+= digit
+            }
+
+        } else {
+            scrn.value += digit
+        }
+    }
+
+    function operators(operator){
+        firstnumber = parseInt(scrn.value)
+        optr = operator
+        scrn.value = ""
+
+    }
+
+    function calculate(){
+        let secondnumber = parseInt(scrn.value)
+
+        switch(optr){
+            case '+': scrn.value = firstnumber + secondnumber ;break
+            case '-': scrn.value = firstnumber - secondnumber ;break
+            case 'x': scrn.value = firstnumber * secondnumber ;break
+            case '/': scrn.value = firstnumber / secondnumber ;break
+        }
+    }
+
+</script>
+
+<input id="scrn">
+<br>
+<input type="button" value="0" id="btn0" onclick="digits(0)">
+<input type="button" value="1" id="btn1" onclick="digits(1)">
+<input type="button" value="2" id="btn2" onclick="digits(2)">
+<input type="button" value="+" id="btn_plus" onclick="operators('+')">
+<br>
+<input type="button" value="3" id="btn3" onclick="digits(3)">
+<input type="button" value="4" id="btn4" onclick="digits(4)">
+<input type="button" value="5" id="btn5" onclick="digits(5)">
+<input type="button" value="-" id="btn_minus" onclick="operators('-')">
+<br>
+<input type="button" value="6" id="btn6" onclick="digits(6)">
+<input type="button" value="7" id="btn7" onclick="digits(7)">
+<input type="button" value="8" id="btn8" onclick="digits(8)">
+<input type="button" value="x" id="btn_times" onclick="operators('x')">
+<br>
+<input type="button" value="9" id="btn9" onclick="digits(9)">
+<input type="button" value="C" id="btn_clear" onclick="clearscreen()">
+<input type="button" value="=" id="bt_result" onclick="calculate()">
+<input type="button" value="/" id="btn_divide" onclick="operators('/')">
+
+
+
+</html>

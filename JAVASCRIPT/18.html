@@ -1,0 +1,113 @@
+<html>
+ 
+<script>
+    let employees = [
+        {
+            name: "Shafeeq",
+            address: "Manchester",
+            salary: 2000,
+            department: "IT"
+        },
+        {
+            name: "JAmes",
+            address: "London",
+            salary: 1200,
+            department: "HR"
+        }
+    ]
+    function showEmployees(condition = false) {
+        table1.innerHTML = ""
+        let tr0 = document.createElement("tr")
+        tr0.style.color = "red"
+        tr0.innerHTML = "<td> S.no </td> <td> Name </td > <td> Address </td>  <td> Department </td>   <td> Salary </td>  <td> Tax </td> <td >operations </td>"
+ 
+ 
+ 
+        table1.appendChild(tr0)
+ 
+        for (let i = 0; i < employees.length; i++) {
+ 
+            if (employees[i].department == department2.value || condition) {
+                let tr1 = document.createElement("tr")
+                let tdSno = document.createElement("td")
+                let td1 = document.createElement("td")
+                let td2 = document.createElement("td")
+                let td3 = document.createElement("td")
+                let td4 = document.createElement("td")
+                let td5 = document.createElement("td")
+                let tdOperations = document.createElement("td")
+ 
+                let btnDelete = document.createElement("input")
+                btnDelete.type = "button"
+                btnDelete.value = "delete"
+                btnDelete.onclick = () => {
+                    let choice = confirm("Are you Sure??")
+                    if (choice == true) {
+                        employees.splice(i, 1)
+                        showEmployees(true)
+                    }
+                }
+                tdOperations.appendChild(btnDelete)
+ 
+                tdSno.innerHTML = i + 1
+                td1.innerHTML = employees[i].name
+                td2.innerHTML = employees[i].address
+                td3.innerHTML = employees[i].department
+                td4.innerHTML = employees[i].salary
+                td5.innerHTML = employees[i].salary * 15 / 100
+ 
+                tr1.appendChild(tdSno)
+                tr1.appendChild(td1)
+                tr1.appendChild(td2)
+                tr1.appendChild(td3)
+                tr1.appendChild(td4)
+                tr1.appendChild(td5)
+                tr1.appendChild(tdOperations)
+ 
+ 
+ 
+                table1.appendChild(tr1)
+            }
+ 
+        }
+ 
+    }
+ 
+    function addEmployee() {
+ 
+        let newEmp = {
+            name: name1.value,
+            address: address1.value,
+            salary: salary1.value,
+            department: deparment1.value
+        }
+ 
+        employees.push(newEmp)
+        showEmployees(true)
+    }
+</script>
+ 
+<body onload="showEmployees(true)">
+    Name:<input id="name1"> <br>
+    Address:<input id="address1"> <br>
+    Salary:<input id="salary1"> <br>
+    Department<select id="deparment1">
+        <option value="IT"> Information Tech </option>
+        <option value="HR"> Human Resource </option>
+        <option value="Sales"> Sales </option>
+    </select>
+    <br>
+    <input type="button" value="New Employee" onclick="addEmployee()"><br>
+    <input type="Button" value="filter" onclick="showEmployees()">
+    <select id="department2">
+        <option value="IT"> Information Tech </option>
+        <option value="HR"> Human Resource </option>
+        <option value="Sales"> Sales </option>
+    </select>
+    <br>
+    <input type="button" value="All Records" onclick="showEmployees(true)"><br>
+    <table border="1" id="table1">
+    </table>
+</body>
+ 
+</html>

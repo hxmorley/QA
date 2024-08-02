@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Nav bar-->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand dance-font">Andy's <span class="text-warning">Bikes</span> </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-to-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="nav-to-collapse">
+                <ul class="navbar-nav ms-auto px-3">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#service" class="nav-link">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#offers" class="nav-link">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#mechanics" class="nav-link">Mechanics</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+              </div>
+
+        </div>
+    </nav>
+    <!-- Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/bmw.jpg" class="d-block w-100 img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/honda.jpg" class="d-block w-100 img-fluid" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/suzuki.jpg" class="d-block w-100 img-fluid" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- Service Options  -->
+
+      <div class="service p-5" id="service">
+        <div class="container">
+            <div class="grid">
+                <div class="row mt-5">
+                    <div class="col-md-4 text-center">
+                        <i class="fa-solid fa-droplet fa-3x text-success my-2"> </i>
+                            <p class="h2 dance-font fw-bold">Oil Service</p>
+                            <p class="lead fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleson lorem jesggo officil faerve construto</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fa-solid fa-snowflake fa-3x text-primary my-2"></i>
+                            <p class="h2 dance-font fw-bold">Winter Service</p>
+                            <p class="lead fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleson lorem jesggo officil faerve construto</p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="fa-solid fa-flag-checkered fa-3x text-danger my-2"></i>
+                            <p class="h2 dance-font fw-bold">Race Training</p>
+                            <p class="lead fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleson lorem jesggo officil faerve construto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Offers -->
+
+      <section class="offers" id="offers">
+        <div class="menu-1 bg-dark p-5" id="offers">
+            <div class="container">
+                <div class="grid">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 dance-font text-white fw-bold">
+                            <p class="h2">CBR <span class="text-danger">1000RR</span></p>
+                            <p class="lead fst-italic">200</p>
+                    
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://www.mystockmanager.co.uk/i/?api_id=207&image_id=13051602-large" width="400px" height="200" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-2 bg-white p-5" id="offers">
+            <div class="container">
+                <div class="grid">
+                    <div class="row align-items-center">
+                        
+                        <div class="col-md-6">
+                            <img src="https://www.mystockmanager.co.uk/i/?api_id=207&image_id=13051602-large" width="400px" height="200" class="img-fluid">
+                        </div>
+                        <div class="col-md-6 dance-font fw-bold">
+                            <p class="h2">CBR <span class="text-danger">1000RR</span></p>
+                            <p class="lead fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleson lorem jons pleson lorem jesggo flappo elarine nostro jons pleson jesggo officil faerve construto</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Mechanics-->
+      <section class="mechanics p-5" id="mechanics">
+        <div class="container">
+            <div class="grid">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="card shadow-lg my-2">
+                            <img src="images/dave.jpg" alt="" class="img-fluid">
+                            <div class="card body p-2">
+                                <p class="h4 card-title fw-bold">Dave Williams</p>
+                                <p class="dance-font text-muted">Honda Specialist</p>
+                                <p class="fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleso</p>
+                                <div class="d-flex justify-content-around">
+                                    <i class="fab fa-facebook text-primary fa-2x"></i>
+                                    <i class="fab fa-twitter text-info fa-2x"></i>
+                                    <i class="fab fa-youtube text-danger fa-2x"></i>
+                                    <i class="fab fa-instagram text-warning fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-lg my-2">
+                            <img src="images/frank.jpg" alt="" class="img-fluid">
+                            <div class="card body p-2">
+                                <p class="h4 card-title fw-bold">Frank Zapp</p>
+                                <p class="dance-font text-muted">BMW Specialist</p>
+                                <p class="fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleso</p>
+                                <div class="d-flex justify-content-around">
+                                <i class="fab fa-facebook text-primary fa-2x"></i>
+                                <i class="fab fa-twitter text-info fa-2x"></i>
+                                <i class="fab fa-youtube text-danger fa-2x"></i>
+                                <i class="fab fa-instagram text-warning fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-lg my-2">
+                            <img src="images/marcus.jpg" alt="" class="img-fluid">
+                            <div class="card body p-2">
+                                <p class="h4 card-title fw-bold">Marcus Wright</p>
+                                <p class="dance-font text-muted">Kawazaki Specialist</p>
+                                <p class="fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleso</p>
+                                <div class="d-flex justify-content-around">
+                                <i class="fab fa-facebook text-primary fa-2x"></i>
+                                <i class="fab fa-twitter text-info fa-2x"></i>
+                                <i class="fab fa-youtube text-danger fa-2x"></i>
+                                <i class="fab fa-instagram text-warning fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-lg my-2">
+                            <img src="images/mavis.jpg" alt="" class="img-fluid">
+                            <div class="card body p-2">
+                                <p class="h4 card-title fw-bold">Mavis Smith</p>
+                                <p class="dance-font text-muted">Harley Specialist</p>
+                                <p class="fst-italic">lorem ipsem epsom jons pleson lorem jesggo flappo elarine nostro jons pleso</p>
+                                <div class="d-flex justify-content-around">
+                                    <i class="fab fa-facebook text-primary fa-2x"></i>
+                                    <i class="fab fa-twitter text-info fa-2x"></i>
+                                    <i class="fab fa-youtube text-danger fa-2x"></i>
+                                    <i class="fab fa-instagram text-warning fa-2x"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer bg-dark text-white p-5" id="contact">
+        <div class="container">
+            <div class="grid">
+                <div class="row align-items-center mt-5">
+                    <div class="col-md-4">
+                        <p >Copyright &copy; 2023 </p>
+                        <small class="dance-font">Andy Smith <br>
+                            Norfolk <br>
+                            UK
+                        </small>
+                    </div>
+                    <div class="col-md-4 offset-md-4 my-2">
+                        <form action="">
+                            <div class="mb-2">
+                                <input type="text" class="form-control" placeholder="Your Name">
+                            </div>
+                            <div class="mb-2">
+                                <input type="email" class="form-control" placeholder="Your Email">
+                            </div>
+                            <div class="mb-2">
+                                <input type="number" class="form-control" placeholder="Your Mobile">
+                            </div>
+                            <div class="mb-2">
+                                <textarea rows="3" class="form-control" placeholder="Your Text"></textarea>
+                            </div>
+                        <input type="submit" class="btn btn-warning" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+      </footer>
+
+</body>
+</html>

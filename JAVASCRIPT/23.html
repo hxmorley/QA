@@ -1,0 +1,106 @@
+<html>
+ 
+<script>
+ 
+ 
+    function getComments(postid) {
+ 
+        let URL = "https://jsonplaceholder.typicode.com/posts/" + postid + "/comments"
+        //  alert(URL)
+ 
+        let commentsPromise = fetch(URL)
+        commentsPromise.then(commentsResponse)
+ 
+    }
+ 
+    function commentsResponse(res) {
+ 
+        let commentsJson = res.json()
+        commentsJson.then(displayComments)
+    }
+ 
+    function displayComments(comments) {
+        table2.innerHTML = null
+        for (let i = 0; i < comments.length; i++) {
+ 
+            let tr1 = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            let td4 = document.createElement("td")
+            let td5 = document.createElement("td")
+ 
+            td1.innerHTML = comments[i].postId
+            td2.innerHTML = comments[i].id
+            td3.innerHTML = comments[i].name
+            td4.innerHTML = comments[i].email
+            td5.innerHTML = comments[i].body
+ 
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td3)
+            tr1.appendChild(td4)
+            tr1.appendChild(td5)
+ 
+            table2.appendChild(tr1)
+        }
+    }
+ 
+    function showPosts() {
+        let promise = fetch("https://jsonplaceholder.typicode.com/posts")
+        promise.then(processPostResponse)
+    }
+ 
+    function processPostResponse(res) {
+ 
+        let jsonResponse = res.json()
+        jsonResponse.then(displayPosts)
+ 
+    }
+ 
+    function displayPosts(posts) {
+ 
+        for (let i = 0; i < posts.length; i++) {
+ 
+            let tr1 = document.createElement("tr")
+            let td1 = document.createElement("td")
+            let td2 = document.createElement("td")
+            let td3 = document.createElement("td")
+            let td4 = document.createElement("td")
+ 
+            let btn = document.createElement("input")
+            btn.type = "button"
+            btn.value = "Comments"
+ 
+            btn.onclick = () => {
+                getComments(posts[i].id)
+            }
+            td4.appendChild(btn)
+ 
+            td1.innerHTML = posts[i].id
+            td2.innerHTML = posts[i].title
+ 
+            tr1.appendChild(td1)
+            tr1.appendChild(td2)
+            tr1.appendChild(td4)
+ 
+ 
+            table1.appendChild(tr1)
+ 
+        }
+ 
+    }
+</script>
+ 
+<input type="Button" value="Display Posts" onclick="showPosts()">
+ 
+<br>
+<br>
+<table border="1" id="table1">
+</table>
+ 
+<table border="4" id="table2">
+</table>
+ 
+ 
+</html>

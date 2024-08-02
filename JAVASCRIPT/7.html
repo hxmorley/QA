@@ -1,0 +1,29 @@
+<html>
+<script>
+    function processing() {
+        msg2.value = ""
+        let what=f1.value
+        let data = msg1.value
+        for (let i = 0; i < data.length; i++) {
+ 
+            if (!(data.substring(i, i + 1) == what.toUpperCase() 
+                    || data.substring(i, i + 1) == what.toLowerCase() )) {
+                msg2.value += data.substring(i, i + 1)
+            }
+        }
+    }
+</script>
+ 
+Find What:<input id="f1">
+<br>
+<br>
+Message1:<input id="msg1">
+<br>
+<input type="button" value="Copy " onclick="processing()">
+<BR>
+Message 2<input id="msg2">
+<br>
+<br>
+ 
+ 
+</html>
